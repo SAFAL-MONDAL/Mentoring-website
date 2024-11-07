@@ -1,0 +1,204 @@
+body {
+	background: linear-gradient(to right, #4a90e2, #d57bfc);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  header {
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 0px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column; /* Stack children vertically */
+	align-items: center;
+	justify-content: center; /* Center title vertically */
+	box-shadow:0 5px 10px rgba(0, 0, 0, 0.6) ;
+  }
+  
+  main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 80px; /* Add padding to make room for the fixed header */
+  }
+  
+  #query-form {
+	background-color: #fff;
+	padding: 40px;
+	margin: 50px auto;
+	width: 600px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  label {
+	margin-bottom: 5px;
+	display: block;
+  }
+  
+  input[type="text"], select, textarea {
+	padding: 5px;
+	margin-bottom: 10px;
+	width: 100%;
+  }
+  
+  input[type="submit"] {
+	background: linear-gradient(to right, #3671fd, #6f31ff); /* Primary color for buttons */
+	color: #fff;
+	display: block; /* Change to block to center the button */
+	margin: 0 auto; /* Center the button horizontally */
+	border: none;
+	padding: 12px 24px; /* Increased padding for larger button */
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+	border-radius: 5px;
+	box-shadow:0 5px 10px rgba(0, 0, 0, 0.3) ;
+  }
+  
+  input[type="submit"]:hover {
+	opacity: 0.9; /* Darker shade for hover effect */
+	transform: scale(1.05); /* Slightly enlarge the button on hover */
+	box-shadow:0 5px 10px rgba(0, 0.1, 0.1, 0.5) ;
+  }
+  
+  button{
+	background: linear-gradient(to right, #3671fd, #6f31ff); /* Primary color for buttons */
+	color: #fff;
+	display: block; /* Change to block to center the button */
+	margin: 0 auto; /* Center the button horizontally */
+	border: none;
+	padding: 12px 24px; /* Increased padding for larger button */
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+	border-radius: 5px;
+	box-shadow:0 5px 10px rgba(0, 0, 0, 0.3) ;
+  }
+  
+  #student-container, #parent-container {
+	margin-bottom: 20px;
+  }
+  
+  #success-message {
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.8); 
+	padding: 20px;
+	border: none; /* Remove the border */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+	display: none;
+	width: 80%; 
+	max-width: 600px; 
+	z-index: 1; 
+  }
+  
+  #success-message.blur {
+	backdrop-filter: blur(10px); 
+	-webkit-backdrop-filter: blur(10px);
+  }
+  
+  #success-message.show {
+	display: block;
+  }
+  
+  #success-message.show ~ #query-form,
+  #success-message.show ~ #query-list {
+	display: none;
+  }
+  
+  #tick-image {
+	display: block;
+	margin: 5px auto;
+	width: 80px;
+	height: 80px;
+  }
+  
+  #success-message-content {
+	text-align: center;
+  }
+  
+  #success-message-content h2 {
+	margin-top: 0;
+  }
+  
+  #success-message-content p {
+	margin-bottom: 20px;
+  }
+  
+  #return-to-queries {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #3671fd;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #return-to-queries:hover {
+	opacity: 0.9;
+	transform: scale(1.05);
+  }
+  
+  /* Responsive design */
+  
+  @media (max-width: 768px) {
+	#query-form {
+	  width: 80%;
+	  padding: 20px;
+	}
+  
+	input[type="text"], select, textarea {
+	  padding: 10px;
+	  margin-bottom: 10px;
+	}
+  
+	input[type="submit"] {
+	  padding: 10px 20px;
+	}
+  
+	button {
+	  padding: 10px 20px;
+	}
+  
+	#success-message {
+	  width: 90%;
+	  max-width: 400px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	#query-form {
+	  width: 90%;
+	  padding: 10px;
+	}
+  
+	input[type="text"], select, textarea {
+	  padding: 5px;
+	  margin-bottom: 5px;
+	}
+  
+	input[type="submit"] {
+	  padding: 5px 10px;
+	}
+  
+	button {
+	  padding: 5px 10px;
+	}
+  
+	#success-message {
+	  width: 95%;
+	  max-width: 300px;
+	}
+  }
+  
